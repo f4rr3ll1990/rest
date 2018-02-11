@@ -146,16 +146,17 @@
       var vm = new Vue({
         el: '#app',
         data: {
-          posts: function() {
-            axios.get("http://rest-f4rr3ll-rest.a3c1.starter-us-west-1.openshiftapps.com/rest.php/test/")
-              .then(response => {this.posts = response.data})
-          }
+          posts: []
         },
         methods: {
           getPostsViaREST: function() {
             axios.get("http://rest-f4rr3ll-rest.a3c1.starter-us-west-1.openshiftapps.com/rest.php/test/")
               .then(response => {this.posts = response.data})
           }
+        },
+        created: function () {
+          axios.get("http://rest-f4rr3ll-rest.a3c1.starter-us-west-1.openshiftapps.com/rest.php/test/")
+              .then(response => {this.posts = response.data})
         }
       });    
     </script>
