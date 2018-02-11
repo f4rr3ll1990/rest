@@ -6,6 +6,7 @@ body {
 canvas {
   background-color:#112;
   height: 30vh;
+  width: 100vw;
 }
 p {
   line-height: 1.5;
