@@ -84,9 +84,9 @@
                 {{ post.body }}
               </h3>
             </a>
-            <p class="post-meta">Posted by
+            <!-- <p class="post-meta">Posted by
               <a href="#">Start Bootstrap</a>
-              on September 24, 2018</p>
+              on September 24, 2018</p> -->
           </div>
 
           <!-- Pager -->
@@ -130,7 +130,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+            <p class="copyright text-muted">Copyright &copy; F4rr3LL 2018</p>
           </div>
         </div>
       </div>
@@ -146,11 +146,7 @@
       var vm = new Vue({
         el: '#app',
         data: {
-          posts: [
-            {title: "My very first Vue.js post", body: "lorem ipsum some test dimpsum"},
-            {title: "My second Vue.js post", body: "lorem ipsum some test dimpsum"},
-            {title: "My third Vue.js post", body: "lorem ipsum some test dimpsum"}
-          ]
+          posts: getPostsViaREST()
         },
         methods: {
           getPostsViaREST: function() {
